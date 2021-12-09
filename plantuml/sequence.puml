@@ -1,0 +1,13 @@
+@startuml Sequence Diagram
+
+Welcome -> Account: Sign In
+Account -> Catalog: Category list
+Account -> Product: Get favourite list
+Product -> Account: Return favourite list
+Account -> Cart: View cart
+Welcome -> Catalog: Category list
+Catalog -> Product: Product list
+Product -> Cart: Add to cart
+Cart -> Cart: Check item stock
+
+@enduml

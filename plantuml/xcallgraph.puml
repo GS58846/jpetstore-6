@@ -1,0 +1,111 @@
+@startuml Execution Call Graph
+
+class AbstractActionBean {
+
+}
+
+class AccountActionBean {
+    newAccount()
+    editAccount()
+    signon()
+    signoff()
+}
+
+class CatalogActionBean {
+    viewCategory()
+    viewProduct()
+    viewItem()
+    searchProduct()
+}
+
+class CartActionBean {
+    addItemToCart()
+    removeItemFromCart()
+    updateCartQuantities()
+    vewCart()
+    checkOut()
+    clear()
+}
+
+class OrderActionBean {
+    listOrders()
+    newOrderForm()
+    newOrder()
+    viewOrder()
+}
+
+' Domain
+
+class Account {
+
+}
+
+class Cart {
+
+}
+ class CartItem {
+
+}
+
+class Item {
+    
+}
+
+class LineItem {
+
+}
+
+class Order {
+
+}
+
+' Mapper
+
+class OrderMapper {
+
+}
+
+' Services
+
+class OrderService {
+    insertOrder()
+    getOrder()
+    getOrderByUsername()
+    getNextId()
+}
+
+class CatalogService {
+    searchProductList()
+    getItemListByProduct()
+    getItem()
+    isItemInStock()
+}
+
+class AccountService {
+    getAccount()
+    insertAccount()
+    updateAccount()
+}
+
+Order -- Account
+Order -- Cart
+Cart -- LineItem 
+LineItem -- CartItem
+
+AbstractActionBean <|-- CatalogActionBean
+AbstractActionBean <|-- CartActionBean
+AbstractActionBean <|-- AccountActionBean
+AbstractActionBean <|-- OrderActionBean
+
+AccountActionBean <-- "3" AccountService
+AccountActionBean <-- "2" CatalogService
+
+CatalogActionBean <-- "4" CatalogService
+
+CatalogService <-- CartActionBean
+
+OrderActionBean <-- AccountActionBean
+OrderActionBean <-- "3" OrderService
+
+
+@enduml
