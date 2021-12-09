@@ -251,11 +251,237 @@ package m4 <<Rectangle>> {
         size: low
     }
 
+    ProductMapper <-- CatalogService : .
+    note on link
+    has attribute of type (1)
+    calls (3)
+    has method parameter (1)
+    end note
+
     class Product {
         coupling: low
         complexity: low
         size: low
     }
+
+    Product <-- Item : .
+    note on link
+    has attribute of type (1)
+    calls (1)
+    has method parameters (2)
+    end note
+
+    Product <-- CatalogActionBean : .
+    note on link
+    has attribute of type (1)
+    has method parameter (2)
+    template instance of (1)
+    end note
+
+    class Item {
+        coupling: low
+        complexity: low-medium
+        size: low-medium
+    }
+
+    Item <-- CatalogService : .
+    note on link
+    has method parameter (1)
+    template instance of (1)
+    end note
+
+    Item <-- CatalogActionBean : .
+    note on link
+    has attribute on type (1)
+    calls (1)
+    has method parameter (2)
+    template instance of (1)
+    end note
+
+    Item <-- ItemMapper : .
+    note on link
+    has method paramter (1)
+    template instance of (1)
+    end note
+
+    class CatalogActionBean {
+        coupling: low
+        complexity: low-medium
+        size: low-medium
+    }
+
+    class ItemMapper {
+        coupling: low
+        complexity: low
+        size: low
+    }
+
+    ItemMapper <-- CatalogService : .
+    note on link
+    has attribute of type (1)
+    calls (3)
+    has method parameter (1)
+    end note
+
+    class CategoryMapper {
+        coupling: low
+        complexity: low
+        size: low
+    }
+
+    CategoryMapper <-- CatalogService : .
+    note on link
+    has attribute of type (1)
+    calls (2)
+    has method parameter (1)
+    end note
+
+    class Category {
+        coupling: low
+        complexity: low
+        size: low
+    }
+
+    Category <-- CatalogActionBean : .
+    note on link
+    has attribute of type (1)
+    has method parameter (2)
+    template instance of (1)
+    end note
+
+    Category <-- CategoryMapper : .
+    note on link
+    has method parameter (1)
+    template instance of (1)
+    end note
+
+    Category <-- CatalogService : .
+    note on link
+    has method parameter (1)
+    template instance of (1)
+    end note
+
+    class CatalogService {
+        coupling: low-medium
+        complexity: low
+        size: low
+    }
+
+    CatalogService <-- CatalogActionBean : .
+    note on link
+    has attribute of type (1)
+    calls (6)
+    end note
+
 }
+
+' Inter-relation
+
+' m1
+
+AccountActionBean <-- OrderActionBean : .
+note on link
+calls (4)
+has method parameter (3)
+end note
+
+Account <-- OrderActionBean : .
+note on link
+calls (2)
+end note
+
+Account <-- Order : .
+note on link
+calls (17)
+has method parameter (1)
+end note
+
+' m3
+
+OrderService <-- OrderActionBean : .
+note on link
+has attribute of type (1)
+calls (3)
+end note
+
+' m4
+
+Item <-- CartActionBean : .
+note on link
+calls (1)
+has method parameter (2)
+end note
+
+Item <-- CartItem : .
+note on link
+has attribute of type (1)
+has method parameter (2)
+tempate instance of (1)
+end note
+
+Item <-- LineItem : .
+note on link
+has attribute of type (1)
+calls (2)
+has method parameter (2)
+template instance of (1)
+end note
+
+Item <-- Cart : .
+note on link
+calls (2)
+has method parameter (2)
+end note
+
+CatalogService <-- CartActionBean : .
+note on link
+has attribute of type (1)
+calls (2)
+end note
+
+CatalogService <-- AccountActionBean : .
+note on link
+has attribute of type (1)
+calls (3)
+end note
+
+ItemMapper <-- OrderService : .
+note on link
+has attribute of type (1)
+has method parameter (1)
+end note
+
+' m2
+
+AbstractActionBean <-- AccountActionBean : .
+note on link
+extends (1)
+calls (1)
+end note
+
+AbstractActionBean <-- CatalogActionBean : .
+note on link
+extends (1)
+calls (1)
+end note 
+
+LineItem <-- LineItemMapper : .
+note on link
+has method parameter (1)
+template instance of (1)
+end note
+
+Order <-- OrderMapper : .
+note on link
+has method parameter (3)
+template instance of (1)
+end note
+
+Order <-- OrderService : .
+note on link
+calls (5)
+has method parameter (3)
+template instance of (1)
+end note
 
 @enduml
