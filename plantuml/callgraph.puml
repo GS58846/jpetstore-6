@@ -1,0 +1,42 @@
+@startuml Class call graph
+
+class AbstractActionBean {}
+
+class CatalogActionBean {}
+
+class CartActionBean {}
+
+class OrderActionBean {}
+
+class AccountActionBean {}
+
+class AccountService {}
+
+class CatalogService {}
+
+class OrderService {}
+
+class Sequence {}
+
+class Category {}
+
+class CartItem {}
+
+class LineItem {}
+
+class Account {}
+
+class Product {}
+
+class Order {}
+
+class Item {}
+
+class Cart {}
+
+AbstractActionBean <|-- CatalogActionBean
+AbstractActionBean <|-- CartActionBean
+AbstractActionBean <|-- AccountActionBean
+AbstractActionBean <|-- OrderActionBean
+
+@enduml
