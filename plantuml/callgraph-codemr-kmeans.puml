@@ -1,0 +1,476 @@
+@startuml Class call graph
+
+package  m1 <<Rectangle>> {
+
+    class CatalogService {
+        coupling: low-medium
+        complexity: low
+        size: low
+    }
+
+    class Category {
+        coupling: low
+        complexity: low
+        size: low
+    }
+
+    class ProductMapper {
+        coupling: low
+        complexity: low
+        size: low
+    }
+
+    class Product {
+        coupling: low
+        complexity: low
+        size: low
+    }
+
+    class Item {
+        coupling: low
+        complexity: low-medium
+        size: low-medium
+    }
+}
+
+package m2 <<Rectangle>> {
+
+    class CartActionBean {
+        coupling: low-medium
+        complexity: low-medium
+        size: low
+    }
+
+    class CatalogActionBean {
+        coupling: low
+        complexity: low-medium
+        size: low-medium
+    }
+
+    class CategoryMapper {
+        coupling: low
+        complexity: low
+        size: low
+    }
+
+    class AccountActionBean {
+        coupling: low-medium
+        complexity: low-medium
+        size: low-medium
+    }
+}
+
+package m3 <<Rectangle>> {
+
+    class Order {
+        coupling: low
+        complexity: medium-high
+        size: very-high
+    }
+
+    class OrderService {
+        coupling: low-medium
+        complexity: low
+        size: low
+    }
+
+    class LineItem {
+        coupling: low
+        complexity: low
+        size: low
+    }
+
+    class CartItem {
+        coupling: low
+        complexity: low
+        size: low
+    }
+
+    class Cart {
+        coupling: low
+        complexity: low
+        size: low
+    }
+
+    class AbstractActionBean {
+        coupling: low
+        complexity: low
+        size: low
+    }
+
+     class OrderActionBean {
+        coupling: low-medium
+        complexity: low-medium
+        size: low-medium
+    }
+
+    class Account {
+        coupling: low
+        complexity: low-medium
+        size: medium-high
+    }
+    class AccountService {
+        coupling: low
+        complexity: low
+        size: low
+    }
+    class AccountMapper {
+        coupling: low
+        complexity: low
+        size: low
+    }
+}
+
+package m4 <<Rectangle>> {
+
+    class ItemMapper {
+        coupling: low
+        complexity: low
+        size: low
+    }
+
+    class LineItemMapper {
+        coupling: low
+        complexity: low
+        size: low
+    }
+
+    class SequenceMapper {
+        coupling: low
+        complexity: low
+        size: low
+    }
+
+    class OrderMapper {
+        coupling: low
+        complexity: low
+        size: low
+    }
+
+    class Sequence {
+        coupling: low
+        complexity: low
+        size: low
+    }
+}
+
+ Account <-- AccountService : .
+note on link
+calls (1)
+has method parameter (4)
+end note
+
+Account <-- AccountActionBean : .
+note on link
+has attribute of type (1)
+calls (11)
+creates (1)
+has method parameter (1)
+end note
+
+Account <-- AccountMapper : .
+note on link 
+has method parameter (8)
+end note
+
+AccountService <-- AccountActionBean : .
+note on link
+has atrribute type (1)
+calls (5)
+end note
+
+AccountMapper <-- AccountService : .
+note on link 
+has attribute of type (1)
+calls (7)
+has method parameter (1)
+end note
+
+Order <-- OrderActionBean : .
+note on link
+has attribute of type (1)
+calls (5)
+create (1)
+has method parameter (2)
+template instance of (1)
+end note
+
+LineItem <-- Order : .
+note on link
+creates (1)
+has method parameter (2)
+template instance of (1)
+end note
+
+CartItem <-- LineItem : .
+note on link
+calls (4)
+has method parameter (1)
+end note
+
+CartItem <-- Order : .
+note on link
+has method parameter (2)
+template instance of (1)
+end note
+
+CartItem <-- Cart : .
+note on link
+calls (7)
+creates (1)
+has method parameter (4)
+template instance of (1)
+end note
+
+CartItem <-- CartActionBean : .
+note on link
+calls (1)
+has method parameter (1)
+template instance of (1)
+end note
+
+Cart <-- Order : .
+note on link
+calls (2)
+has method parameter (1)
+end note
+
+Cart <-- CartActionBean : .
+note on link
+has attribute of type (1)
+calls (6)
+creates (1)
+has method parameters (2)
+end note
+
+AbstractActionBean <-- CartActionBean : .
+note on link
+extends (1)
+calls (2)
+end note
+
+AbstractActionBean <-- OrderActionBean : .
+note on link
+extends (1)
+calls (5)
+end note
+
+CartActionBean <-- OrderActionBean : .
+note on link
+calls (2)
+has method parameter (2)
+end note
+
+OrderMapper <-- OrderService : .
+note on link
+has attribute of type (1)
+calls (4)
+has method parameter (1)
+end note
+
+LineItemMapper <-- OrderService : .
+note on link
+has attribute type (1)
+calls (1)
+has method parameter (1)
+end note
+
+SequenceMapper <-- OrderService : .
+note on link
+has attibute of type (1)
+calls (2)
+has method parameter (1)
+end note
+
+Sequence <-- SequenceMapper : .
+note on link
+has method parameter (3)
+end note
+
+Sequence <-- OrderService : .
+note on link
+calls (2)
+creates (2)
+has method parameter (2)
+end note
+
+ProductMapper <-- CatalogService : .
+note on link
+has attribute of type (1)
+calls (3)
+has method parameter (1)
+end note
+
+Product <-- Item : .
+note on link
+has attribute of type (1)
+calls (1)
+has method parameters (2)
+end note
+
+Product <-- CatalogActionBean : .
+note on link
+has attribute of type (1)
+has method parameter (2)
+template instance of (1)
+end note
+
+Item <-- CatalogService : .
+note on link
+has method parameter (1)
+template instance of (1)
+end note
+
+Item <-- CatalogActionBean : .
+note on link
+has attribute on type (1)
+calls (1)
+has method parameter (2)
+template instance of (1)
+end note
+
+Item <-- ItemMapper : .
+note on link
+has method paramter (1)
+template instance of (1)
+end note
+
+ItemMapper <-- CatalogService : .
+note on link
+has attribute of type (1)
+calls (3)
+has method parameter (1)
+end note
+
+CategoryMapper <-- CatalogService : .
+note on link
+has attribute of type (1)
+calls (2)
+has method parameter (1)
+end note
+
+Category <-- CatalogActionBean : .
+note on link
+has attribute of type (1)
+has method parameter (2)
+template instance of (1)
+end note
+
+Category <-- CategoryMapper : .
+note on link
+has method parameter (1)
+template instance of (1)
+end note
+
+Category <-- CatalogService : .
+note on link
+has method parameter (1)
+template instance of (1)
+end note
+
+CatalogService <-- CatalogActionBean : .
+note on link
+has attribute of type (1)
+calls (6)
+end note
+
+AccountActionBean <-- OrderActionBean : .
+note on link
+calls (4)
+has method parameter (3)
+end note
+
+Account <-- OrderActionBean : .
+note on link
+calls (2)
+end note
+
+Account <-- Order : .
+note on link
+calls (17)
+has method parameter (1)
+end note
+
+OrderService <-- OrderActionBean : .
+note on link
+has attribute of type (1)
+calls (3)
+end note
+
+Item <-- CartActionBean : .
+note on link
+calls (1)
+has method parameter (2)
+end note
+
+Item <-- CartItem : .
+note on link
+has attribute of type (1)
+has method parameter (2)
+tempate instance of (1)
+end note
+
+Item <-- LineItem : .
+note on link
+has attribute of type (1)
+calls (2)
+has method parameter (2)
+template instance of (1)
+end note
+
+Item <-- Cart : .
+note on link
+calls (2)
+has method parameter (2)
+end note
+
+CatalogService <-- CartActionBean : .
+note on link
+has attribute of type (1)
+calls (2)
+end note
+
+CatalogService <-- AccountActionBean : .
+note on link
+has attribute of type (1)
+calls (3)
+end note
+
+ItemMapper <-- OrderService : .
+note on link
+has attribute of type (1)
+has method parameter (1)
+end note
+
+AbstractActionBean <-- AccountActionBean : .
+note on link
+extends (1)
+calls (1)
+end note
+
+AbstractActionBean <-- CatalogActionBean : .
+note on link
+extends (1)
+calls (1)
+end note 
+
+LineItem <-- LineItemMapper : .
+note on link
+has method parameter (1)
+template instance of (1)
+end note
+
+Order <-- OrderMapper : .
+note on link
+has method parameter (3)
+template instance of (1)
+end note
+
+Order <-- OrderService : .
+note on link
+calls (5)
+has method parameter (3)
+template instance of (1)
+end note
+
+@enduml
