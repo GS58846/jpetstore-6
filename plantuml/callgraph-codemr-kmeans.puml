@@ -154,7 +154,7 @@ package m4 <<Rectangle>> {
     }
 }
 
- Account <-- AccountService : .
+Account <-- AccountService : .
 note on link
 calls (1)
 has method parameter (4)
