@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local-project language="java" version="6.1.20378" xml-version="3" flavor="j2se">
+  <property name="show-as-module" value="false" />
+  <property name="force-classpath" value="false" />
+  <property name="enabled-optional-measures" value="" />
+  <property name="root-file" value="" />
+  <property name="project-type" value="eclipse_workspace" />
+  <property name="hide-externals" value="true" />
+  <property name="parse-archive-in-archive" value="false" />
+  <property name="include-injected-dependency" value="false" />
+  <property name="relative-to" value="const(THIS_FILE)" />
+  <property name="action-set-mod" value="1" />
+  <property name="detail-mode" value="true" />
+  <property name="hide-deprecated" value="false" />
+  <property name="resolve-name-clashes" value="true" />
+  <property name="project-excluded" />
+  <property name="show-needs-to-compile" value="false" />
+  <classpath>
+    <classpathentry kind="lib" path="target/classes" module="jpetstore-6" displaymodule="jpetstore-6" />
+  </classpath>
+  <pom-root-files />
+  <modules-in-scope />
+  <excludes>
+    <exclude expression="*.*&amp;amp;*" active="true" />
+    <exclude expression="jpetstore-6.org.mybatis.jpetstore.mapper.*" active="true" />
+  </excludes>
+  <excludes-from-xs>
+    <exclude-from-xs expression="jpetstore-6.org.mybatis.jpetstore.mapper" active="true" />
+  </excludes-from-xs>
+  <restructuring>
+    <set version="3" name="Action list 1" hiview="Codemap" active="true" todo="false" list="0">
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.web.actions.OrderActionBean to 16">
+        <params name="16">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.web.actions.OrderActionBean" type="class" path="jpetstore-6.org.mybatis.jpetstore.web.actions.OrderActionBean">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="web" type="package" />
+            <node name="actions" type="package" />
+            <node name="OrderActionBean" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.web.actions.AccountActionBean to 13">
+        <params name="13">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.web.actions.AccountActionBean" type="class" path="jpetstore-6.org.mybatis.jpetstore.web.actions.AccountActionBean">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="web" type="package" />
+            <node name="actions" type="package" />
+            <node name="AccountActionBean" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.web.actions.CartActionBean to 14">
+        <params name="14">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.web.actions.CartActionBean" type="class" path="jpetstore-6.org.mybatis.jpetstore.web.actions.CartActionBean">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="web" type="package" />
+            <node name="actions" type="package" />
+            <node name="CartActionBean" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.web.actions.CatalogActionBean to 15">
+        <params name="15">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.web.actions.CatalogActionBean" type="class" path="jpetstore-6.org.mybatis.jpetstore.web.actions.CatalogActionBean">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="web" type="package" />
+            <node name="actions" type="package" />
+            <node name="CatalogActionBean" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.web.actions.AbstractActionBean to 12">
+        <params name="12">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.web.actions.AbstractActionBean" type="class" path="jpetstore-6.org.mybatis.jpetstore.web.actions.AbstractActionBean">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="web" type="package" />
+            <node name="actions" type="package" />
+            <node name="AbstractActionBean" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.service.AccountService to 9">
+        <params name="9">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.service.AccountService" type="class" path="jpetstore-6.org.mybatis.jpetstore.service.AccountService">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="service" type="package" />
+            <node name="AccountService" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.service.CatalogService to 10">
+        <params name="10">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.service.CatalogService" type="class" path="jpetstore-6.org.mybatis.jpetstore.service.CatalogService">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="service" type="package" />
+            <node name="CatalogService" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.service.OrderService to 11">
+        <params name="11">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.service.OrderService" type="class" path="jpetstore-6.org.mybatis.jpetstore.service.OrderService">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="service" type="package" />
+            <node name="OrderService" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.domain.Cart to 1">
+        <params name="1">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.domain.Cart" type="class" path="jpetstore-6.org.mybatis.jpetstore.domain.Cart">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="domain" type="package" />
+            <node name="Cart" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.domain.Order to 6">
+        <params name="6">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.domain.Order" type="class" path="jpetstore-6.org.mybatis.jpetstore.domain.Order">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="domain" type="package" />
+            <node name="Order" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.domain.LineItem to 5">
+        <params name="5">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.domain.LineItem" type="class" path="jpetstore-6.org.mybatis.jpetstore.domain.LineItem">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="domain" type="package" />
+            <node name="LineItem" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.domain.CartItem to 2">
+        <params name="2">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.domain.CartItem" type="class" path="jpetstore-6.org.mybatis.jpetstore.domain.CartItem">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="domain" type="package" />
+            <node name="CartItem" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.domain.Item to 4">
+        <params name="4">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.domain.Item" type="class" path="jpetstore-6.org.mybatis.jpetstore.domain.Item">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="domain" type="package" />
+            <node name="Item" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.domain.Account to 0">
+        <params name="0">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.domain.Account" type="class" path="jpetstore-6.org.mybatis.jpetstore.domain.Account">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="domain" type="package" />
+            <node name="Account" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.domain.Category to 3">
+        <params name="3">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.domain.Category" type="class" path="jpetstore-6.org.mybatis.jpetstore.domain.Category">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="domain" type="package" />
+            <node name="Category" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.domain.Product to 7">
+        <params name="7">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.domain.Product" type="class" path="jpetstore-6.org.mybatis.jpetstore.domain.Product">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="domain" type="package" />
+            <node name="Product" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+      <action type="rename" active="true" last-applied="true" description="Rename jpetstore-6.org.mybatis.jpetstore.domain.Sequence to 8">
+        <params name="8">
+          <source-fqn fqn="jpetstore-6.org.mybatis.jpetstore.domain.Sequence" type="class" path="jpetstore-6.org.mybatis.jpetstore.domain.Sequence">
+            <node name="jpetstore-6" type="jar" />
+            <node name="org" type="package" />
+            <node name="mybatis" type="package" />
+            <node name="jpetstore" type="package" />
+            <node name="domain" type="package" />
+            <node name="Sequence" type="class" />
+          </source-fqn>
+        </params>
+      </action>
+    </set>
+  </restructuring>
+  <sourcepaths>
+    <pathentry type="file" path="src/main/java" />
+    <pathentry type="file" path="src/test/java" />
+  </sourcepaths>
+  <grid-set sep="." version="6.1.20378" />
+</local-project>
